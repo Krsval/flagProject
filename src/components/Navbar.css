@@ -1,0 +1,47 @@
+header {
+    background-color: #2b3844;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 1152px;
+  }
+  
+  .navbar h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .navbar img {
+    height: 20px;
+  }
+  
+  .dark-light-mode {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    height: 30px;
+    border-radius: 7px;
+    transition: all 0.2s;
+  }
+  
+  .dark-light-mode p {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: larger;
+  }
+  
+  .dark-light-mode:hover {
+    cursor: pointer;
+    box-shadow: rgba(253, 253, 253, 0.3) 0px 0px 5px 5px;
+  }
+  
