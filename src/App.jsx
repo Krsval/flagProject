@@ -4,8 +4,11 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import RootLayout from './layouts/RootLayout'
 import CountryLayout from './layouts/CountryLayout'
 
+import Home from './pages/Home'
+
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<RootLayout/>}>
+    <Route index element={<Home />}/>
   </Route>
 ))
 
@@ -13,7 +16,7 @@ function App() {
 
   return (
     <>
-      <RootLayout />
+      <RouterProvider router={router} />
     </>
   )
 }

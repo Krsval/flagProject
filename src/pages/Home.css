@@ -1,0 +1,20 @@
+.home-page {
+    margin: 50px 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
