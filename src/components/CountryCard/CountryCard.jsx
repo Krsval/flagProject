@@ -1,15 +1,17 @@
 import "./CountryCard.css";
-import React from "react";
 
-const CountryCard = ({ data }) => {
+const CountryCard = ({ flag, country, capital, population, languages }) => { 
+
   return (
     <div className="CountryCard">
-      <div className="flag"></div>
+      <div className="flag">
+        <img src={flag} alt={country} />
+      </div>
       <div className="text-section">
-        <h4>Sweden</h4>
-        <p>Capital: Stockholm</p>
-        <p>Population: 10K</p>
-        <p>Language: Swedish</p>
+        <h4>{country}</h4>
+        <p>Capital: {capital}</p>
+        <p>Population: {population}</p>
+        <p>Language: {languages}</p>
       </div>
     </div>
   );
