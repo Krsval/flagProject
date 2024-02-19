@@ -1,8 +1,7 @@
 .CountryCard {
-  height: 250px;
   width: 200px;
   border-radius: 4px;
-  background-color: #424e59;
+  background-color: rgb(43, 56, 68);
   transition: all 0.2s;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
@@ -29,6 +28,18 @@
   object-fit: fill;
 }
 
+.text-section h4 {
+  color: white;
+  font-size: 14px;
+}
+
 .text-section {
-  padding: 10px 0px 0px 10px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.775);
+  font-size: 12px;
+}
+
+.text-section div {
+  display: flex;
+  align-items: center;
 }

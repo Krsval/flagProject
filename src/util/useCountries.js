@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const apiURL = 'https://restcountries.com/v3.1/all?fields=name,flags,population,capital,languages';
+const apiURL = 'https://restcountries.com/v3.1/all?fields=name,flags,population,capital,languages,region';
 
 const useCountries = () => {
     const [countries, setCountries] = useState([])
