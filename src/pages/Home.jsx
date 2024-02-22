@@ -8,43 +8,35 @@ import Dropdown from "../components/Dropdown/Dropdown";
 const Home = () => {
   const [searchItem, setSearchItem] = useState("");
   const [filterRegion, setFilterRegion] = useState("");
-  const [selectedRegion, setSelectedRegion] = useState("");
 
+
+  // Filtreras i useCountries.js
   const handleSearch = (searchTerm) => {
     setSearchItem(searchTerm);
   };
-
+  
+  // Filtreras i useCountries.js
   const handleRegionFilter = (region) => {
     setFilterRegion(region);
-    setSelectedRegion(region);
   };
 
-  const filteredCountries = useCountries().filter((country) => {
-    return country.name.common.toLowerCase().includes(searchItem.toLowerCase());
-  }).filter((country) => {
-    if (filterRegion === "") return true; // Om ingen region är vald, returnera alla länder
-    return country.region.toLowerCase() === filterRegion.toLowerCase();
-  });
-
-  
+  const countries = useCountries();
 
   return (
     <div className="home-page">
       <div className="search">
         <SearchBar onSearch={handleSearch} />
-        <Dropdown onSelectRegion={handleRegionFilter} selectedRegion={selectedRegion} />
+        <Dropdown onSelectRegion={handleRegionFilter} />
       </div>
       <div className="card-layout">
-        {filteredCountries.map((country) => (
+        {countries.map((country) => (
           <CountryCard
             key={country.name.common}
             flag={country.flags.png}
             country={country.name.common}
             capital={country.capital}
-            population={new Intl.NumberFormat("en-US").format(
-              country.population
-            )}
-            languages={Object.values(country.languages).join(", ")}
+            population={new Intl.NumberFormat("en-US").format(country.population)}
+            languages={Object.values(country.languages).slice(0,1)}
           />
         ))}
       </div>

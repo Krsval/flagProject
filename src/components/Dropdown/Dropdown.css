@@ -35,6 +35,12 @@
     border: 1px solid white;
 }
 
+.Dropdown button {
+    font-weight: 300;
+    font-size: 1.0rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .dropdown-content {
     display: none;
     width: 100%;
@@ -63,4 +69,17 @@
 .dropdown-content button:hover {
     color: #FFFFFF;
     background-color: #57616B;
+}
+
+.Dropdown span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        font-size: 1.0rem;
+        pointer-events: none;
+        transform: translateY(-50%) scale(0.6);
+        margin-left: -20px;
+        background-color: #202C36;
+        padding: 12px;
 }

@@ -13,13 +13,17 @@ header {
     width: 1152px;
   }
   
-  .navbar h1 {
+  .navbar a {
     font-weight: 600;
     letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
   }
   
   .navbar img {
     height: 20px;
+    pointer-events: none;
   }
   
   .dark-light-mode {

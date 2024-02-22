@@ -6,7 +6,7 @@ const RootLayout = () => {
     <div className="root-layout">
       <header>
         <nav className="navbar">
-          <h1>The Flag App</h1>
+          <a href="/">The Flag App</a>
           <img src="src\assets\techover-logo.png" alt="TECHOVER" />
           <button className="dark-light-mode">
             <img src="src\assets\moon.svg" alt="Moon" />

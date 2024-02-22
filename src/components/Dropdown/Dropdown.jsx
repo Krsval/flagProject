@@ -13,7 +13,7 @@ const Dropdown = ({ onSelectRegion, selectedRegion }) => {
   return (
     <div className="Dropdown">
       <button>
-        {selectedRegion || "Region"}
+        {selectedRegion || "All"}
         <img src="src\assets\arrow-down-light.svg" alt="" />
       </button>
       <div className="dropdown-content">
@@ -36,6 +36,7 @@ const Dropdown = ({ onSelectRegion, selectedRegion }) => {
           Oceania
         </button>
       </div>
+      <span>Select Region</span>
     </div>
   );
 };

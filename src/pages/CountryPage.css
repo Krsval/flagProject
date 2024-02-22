@@ -1,0 +1,40 @@
+.country-page {
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.country-section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.img-tag {
+    background-color: yellow;
+    height: 300px;
+    width: 400px;
+}
+
+.overall-country-info {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.country-info div {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.right-text-section, .left-text-section {
+    width: 250px;
+}
+
+.border-countries {
+    height:100px;
+}
