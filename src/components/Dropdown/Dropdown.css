@@ -23,8 +23,10 @@
     justify-content: space-between;
     width: 100%;
     color: white;
-    font-size: 1.1rem;
     font-weight: normal;
+    font-weight: 300;
+    font-size: 1.0rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .Dropdown img {
@@ -33,12 +35,6 @@
 
 .Dropdown:hover, .Dropdown:focus {
     border: 1px solid white;
-}
-
-.Dropdown button {
-    font-weight: 300;
-    font-size: 1.0rem;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .dropdown-content {

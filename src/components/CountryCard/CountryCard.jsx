@@ -1,8 +1,10 @@
 import "./CountryCard.css";
+import { Link } from "react-router-dom";
 
-const CountryCard = ({ flag, country, capital, population, languages }) => {
+const CountryCard = ({ flag, country, capital, population, languages, onClick }) => {
+
   return (
-    <div className="CountryCard">
+    <div className="CountryCard" onClick={onClick}>
       <div className="flag">
         <img src={flag} alt={country} />
       </div>
@@ -10,7 +12,7 @@ const CountryCard = ({ flag, country, capital, population, languages }) => {
         <h4>{country}</h4>
         <br />
         <div>
-          <h5>Capital: </h5>
+          <h5>Capital:</h5>
           <p>{capital}</p>
         </div>
         <div>

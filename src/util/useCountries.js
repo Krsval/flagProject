@@ -20,12 +20,15 @@ const useCountries = () => {
     fetchCountries();
   }, []);
 
-
   //.filter funktion på region i dropdown, sökfält och .sort på alfabetisk ordning
-  return countries
-    .filter((country) => country.name.common.toLowerCase().includes(searchItem.toLowerCase()))
-    .filter((country) => !filterRegion || country.region.toLowerCase() === filterRegion.toLowerCase())
-    .sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+  const searchCountry = countries.filter((country) => country.name.common.toLowerCase().includes(searchItem.toLowerCase()))
+
+  const filterByRegion = countries.filter((country) => !filterRegion || country.region.toLowerCase() === filterRegion.toLowerCase())
+  
+  const alphabeticOrder = countries.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+  return (searchCountry, filterByRegion, alphabeticOrder)
 };
 
 export default useCountries;

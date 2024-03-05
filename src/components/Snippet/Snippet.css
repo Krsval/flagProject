@@ -1,0 +1,16 @@
+.snippet {
+    font-weight: 300;
+    padding: 4px 8px;
+    border-radius: 40px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s;
+    background-color: #444E56;
+}
+
+.snippet:hover {
+    background-color: #606d76;
+}
