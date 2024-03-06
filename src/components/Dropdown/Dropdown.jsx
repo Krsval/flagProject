@@ -1,14 +1,8 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import "./Dropdown.css";
 
-const Dropdown = ({ onSelectRegion, selectedRegion }) => {
-  const [inputValue, setInputValue] = useState("");
-
-  const handleSelectRegion = (e) => {
-    const region = e.target.value;
-    setInputValue(region);
-    onSelectRegion(region);
-  };
+const Dropdown = ({ selectedRegion }) => {
 
   return (
     <div className="Dropdown">
@@ -17,24 +11,24 @@ const Dropdown = ({ onSelectRegion, selectedRegion }) => {
         <img src="src\assets\arrow-down-light.svg" alt="" />
       </button>
       <div className="dropdown-content">
-        <button onClick={handleSelectRegion} value="">
+        <Link to={'/'} value="">
           All
-        </button>
-        <button onClick={handleSelectRegion} value="Europe">
+        </Link>
+        <Link to={'/europe'} value="Europe">
           Europe
-        </button>
-        <button onClick={handleSelectRegion} value="Americas">
+        </Link>
+        <Link to={'/americas'} value="Americas">
           Americas
-        </button>
-        <button onClick={handleSelectRegion} value="Africa">
+        </Link>
+        <Link to={'/africa'} value="Africa">
           Africa
-        </button>
-        <button onClick={handleSelectRegion} value="Asia">
+        </Link>
+        <Link to={'/asia'} value="Asia">
           Asia
-        </button>
-        <button onClick={handleSelectRegion} value="Oceania">
+        </Link>
+        <Link to={'/oceania'} value="Oceania">
           Oceania
-        </button>
+        </Link>
       </div>
       <span>Select Region</span>
     </div>

@@ -1,5 +1,5 @@
 .CountryCard {
-  width: 200px;
+  width: 300px;
   border-radius: 4px;
   background-color: rgb(43, 56, 68);
   transition: all 0.2s;
@@ -16,14 +16,9 @@
   cursor: pointer;
 }
 
-.flag {
-  height: 100px;
-  border-radius: 6px 6px 0px 0px;
-}
-
 .flag img {
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  width: 300px;
   border-radius: 4px 4px 0px 0px;
   object-fit: fill;
   pointer-events: none;
@@ -31,13 +26,13 @@
 
 .text-section h4 {
   color: white;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .text-section {
   padding: 10px;
   color: rgba(255, 255, 255, 0.775);
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .text-section div {
