@@ -24,13 +24,13 @@
   pointer-events: none;
 }
 
-.text-section h4 {
+.country_card_name {
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .text-section {
-  padding: 10px;
+  padding: 16px;
   color: rgba(255, 255, 255, 0.775);
   font-size: 15px;
 }

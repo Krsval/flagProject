@@ -53,16 +53,18 @@
     display: block;
 }
 
-.dropdown-content button {
+.region-link {
     color: #ffffff;
     padding: 5px;
     text-decoration: none;
     padding-left: 15px;
     display: flex;
     cursor: pointer;
+    
 }
 
-.dropdown-content button:hover {
+
+.region-link:hover {
     color: #FFFFFF;
     background-color: #57616B;
 }

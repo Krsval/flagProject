@@ -6,30 +6,30 @@ const CountryCard = ({
   country,
   capital,
   population,
-  languages,
+  language,
   onClick,
   cca3
 }) => {
   return (
-    <Link to={`/${cca3.toLowerCase()}`} style={{textDecoration: 'none'}}>
+    <Link key={`${country}`} to={`/country/${cca3.toLowerCase()}`} style={{textDecoration: 'none'}}>
       <div className="CountryCard" onClick={onClick}>
         <div className="flag">
           <img src={flag} alt={country} />
         </div>
         <div className="text-section">
-          <h4>{country}</h4>
+          <strong className="country_card_name">{country}</strong>
           <br />
           <div>
-            <h5>Capital:</h5>
-            <p>{capital}</p>
+            <strong>Capital:</strong>
+            {capital}
           </div>
           <div>
-            <h5>Population:</h5>
-            <p>{population}</p>
+            <strong>Population:</strong>
+            {population}
           </div>
           <div>
-            <h5>Language:</h5>
-            <p>{languages}</p>
+            <strong>Language:</strong>
+            {language}
           </div>
         </div>
       </div>

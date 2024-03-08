@@ -1,19 +1,16 @@
-
-
-const singleCountryLoader = async (countryCode) => {
+const singleCountryLoader = async ({ params }) => {
+    const { countryCode } = params;
   
-  try {
-    const res = await fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`);
-    if (!res.ok) {
-      throw new Error(`Failed to fetch data for country with code ${countryCode}`);
+    const countryRes = await fetch(
+      `https://restcountries.com/v3.1/alpha/${countryCode}`
+    );
+  
+    if (!countryRes.ok) {
+      throw Error(`Failed to load country data with code: ${countryCode}`);
     }
-    const singleData = await res.json();
-    console.log(singleData);
-    return singleData;
-  } catch (error) {
-    console.error('Error fetching single country data:', error);
-    return null;
-  }
-}
+    const countryData = await countryRes.json();
+    console.log('API', countryData);
+    return { country: countryData };
+  };
 
 export default singleCountryLoader;
