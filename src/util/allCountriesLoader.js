@@ -3,16 +3,16 @@ const getAllCountries = async () => {
 }
 
 const getCountriesByFilters = async (searchTerm, region) => {
-  if (region !== undefined) {
+  if (region !== null) {
     return await fetch(
       `https://restcountries.com/v3.1/region/${region}`
     );
-  } else if (searchTerm !== undefined){
+  } else if (searchTerm !== null){
     return await fetch(
       `https://restcountries.com/v3.1/name/${searchTerm}`
     );
   } else {
-    return await fetch("https://restcountries.com/v3.1/all");
+    throw Error("Could not find any countries!");
   }
 
  }
@@ -33,7 +33,6 @@ const allCountriesLoader = async ({ request }) => {
     const alphabeticOrder = data.sort((a, b) =>
       a.name.common.localeCompare(b.name.common)
     );
-    console.log(alphabeticOrder);
     return alphabeticOrder;
   } catch (error) {
     console.error('Error fetching all countries data:', error);

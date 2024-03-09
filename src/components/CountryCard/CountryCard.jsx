@@ -17,7 +17,7 @@ const CountryCard = ({
           <img src={flag} alt={country} />
         </div>
         <div className="text-section">
-          <strong className="country_card_name">{country}</strong>
+          <div className="country_card_name"><strong>{country}</strong></div>
           <br />
           <div>
             <strong>Capital:</strong>

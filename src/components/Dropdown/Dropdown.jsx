@@ -4,10 +4,9 @@ import "./Dropdown.css";
 
 const Dropdown = () => {
   
-
-
   return (
     <div className="Dropdown">
+      All
       <button>
         <img src="../src\assets\arrow-down-light.svg" alt="" />
       </button>

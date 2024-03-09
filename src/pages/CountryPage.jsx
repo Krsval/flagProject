@@ -4,7 +4,6 @@ import { useLoaderData } from "react-router-dom";
 
 const CountryPage = () => {
   const { country } = useLoaderData();
-  console.log("hello", country);
 
   if (!country) {
     return <div>Loading...</div>
@@ -23,12 +22,12 @@ const CountryPage = () => {
             flag={countryData.flags.svg}
             alt={countryData.flag.alt}
             country={countryData.name.common}
-            nativeName={countryData.name.nativeName}
-            capital={countryData.capital}
+            nativeName={countryData.name.nativeName ? countryData.name.nativeName : '------'}
+            capital={countryData.capital ? countryData.capital : '------'}
             population={new Intl.NumberFormat("en-US").format(
               countryData.population
             )}
-            languages={Object.values(countryData.languages)[0]}
+            languages={countryData.languages ? Object.values(countryData.languages)[0] : '------'}
             region={countryData.region}
             domain={countryData.tld}
             currency={countryData.currencies}

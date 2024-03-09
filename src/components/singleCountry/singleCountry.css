@@ -42,6 +42,9 @@
 
 .single_line_info_text {
     padding-bottom: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .border-countries {

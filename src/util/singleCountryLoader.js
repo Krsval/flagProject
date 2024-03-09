@@ -9,7 +9,6 @@ const singleCountryLoader = async ({ params }) => {
       throw Error(`Failed to load country data with code: ${countryCode}`);
     }
     const countryData = await countryRes.json();
-    console.log('API', countryData);
     return { country: countryData };
   };
 

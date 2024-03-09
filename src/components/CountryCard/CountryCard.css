@@ -27,11 +27,12 @@
 .country_card_name {
   color: white;
   font-size: 1rem;
+  line-height: 1;
 }
 
 .text-section {
   padding: 16px;
-  color: rgba(255, 255, 255, 0.775);
+  color: #C7CACE;
   font-size: 15px;
 }
 

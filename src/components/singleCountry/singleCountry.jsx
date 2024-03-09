@@ -12,7 +12,9 @@ const SingleCountry = ({
   domain,
   currency,
   cca3,
+  
 }) => {
+  console.log(languages);
   return (
     <div className="country-section">
       <div className="flag">
@@ -37,7 +39,7 @@ const SingleCountry = ({
               </div>
               <div className="single_line_info_text">
                 <strong>Native name: </strong>
-                {Object.values(nativeName)[0].common}
+                {nativeName ? Object.values(nativeName)[0].common : '------'}
                 
               </div>
             </div>
@@ -46,7 +48,7 @@ const SingleCountry = ({
                 <strong>Top domain:</strong> {domain}
               </div>
               <div className="single_line_info_text">
-                <strong>Currency:</strong> {Object.values(currency)[0].name}
+                <strong>Currency:</strong> {currency ? Object.values(currency)[0].name : '------'}
               </div>
               <div className="single_line_info_text">
                 <strong>Laguage:</strong> {languages}
