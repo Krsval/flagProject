@@ -27,6 +27,8 @@ const CountryPage = () => {
             population={new Intl.NumberFormat("en-US").format(
               countryData.population
             )}
+            borderCountries={countryData.borders ? countryData.borders.map((border) => border) : []}
+
             languages={countryData.languages ? Object.values(countryData.languages)[0] : '------'}
             region={countryData.region}
             domain={countryData.tld}

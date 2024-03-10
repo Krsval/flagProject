@@ -5,10 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 const SearchBar = ({}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [inputValue, setInputValue] = useState('');
-  for(const entry of searchParams.entries()) {
-    const [params, value] = entry
-    console.log(params, value);
-  }
+  searchParams.entries()
 
 
   const handleChange = (event) => {

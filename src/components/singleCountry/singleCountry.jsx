@@ -1,4 +1,5 @@
 import "./singleCountry.css";
+import BorderSnippet from '../BorderSnippet/BorderSnippet'
 
 const SingleCountry = ({
   flag,
@@ -11,13 +12,12 @@ const SingleCountry = ({
   region,
   domain,
   currency,
-  cca3,
+  borderCountries
   
 }) => {
-  console.log(languages);
   return (
     <div className="country-section">
-      <div className="flag">
+      <div className="country_flag">
         <img src={flag} alt={alt} />
       </div>
       <div className="country_name_info_borders">
@@ -58,7 +58,11 @@ const SingleCountry = ({
         </div>
         <div className="border-countries">
           <h4>Border Countries</h4>
-          <div className="snippets"></div>
+          <div className="snippets">
+            {borderCountries.map((border) => (
+              <BorderSnippet border={border} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

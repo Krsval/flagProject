@@ -7,6 +7,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const countries = useLoaderData();
+    
 
   return (
     <div className="Home">

@@ -1,5 +1,6 @@
 .CountryCard {
   width: 300px;
+  height: 300px;
   border-radius: 4px;
   background-color: rgb(43, 56, 68);
   transition: all 0.2s;

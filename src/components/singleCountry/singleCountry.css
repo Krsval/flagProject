@@ -5,9 +5,13 @@
     gap: 50px;
 }
 
-.country-section img {
+.country_flag {
+    height: 300px;
+}
+
+.country_flag img {
     border-radius: 10px;
-    object-fit: fill;
+    object-fit: cover;
     height: 100%;
     width: 100%;
 }
