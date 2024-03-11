@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    color: white;
+    color: var(--primary-color);
     font-weight: normal;
     font-weight: 300;
     font-size: 1.0rem;
@@ -34,7 +34,7 @@
 }
 
 .Dropdown:hover, .Dropdown:focus {
-    border: 1px solid white;
+    border: 1px solid var(--primary-color);
 }
 
 .dropdown-content {
@@ -42,7 +42,7 @@
     width: 100%;
     overflow: auto;
     box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.834);
-    background-color: #424E59;
+    background-color: var(--card-color);
     position: absolute;
     top: 101%;
     left: 0;
@@ -54,7 +54,7 @@
 }
 
 .region-link {
-    color: #ffffff;
+    color: var(--primary-color);
     padding: 5px;
     text-decoration: none;
     padding-left: 15px;
@@ -65,19 +65,18 @@
 
 
 .region-link:hover {
-    color: #FFFFFF;
-    background-color: #57616B;
+    background-color: var(--hoverLink-color);
 }
 
 .Dropdown span {
         position: absolute;
         top: 0;
         left: 0;
-        color: white;
+        color: var(--primary-color);
         font-size: 1.0rem;
         pointer-events: none;
         transform: translateY(-50%) scale(0.6);
         margin-left: -20px;
-        background-color: #202C36;
+        background-color: var(--bg-color);
         padding: 12px;
 }

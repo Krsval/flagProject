@@ -1,16 +1,17 @@
 .country-page {
-    color:white;
+    color:var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1152px;
+    max-width: 1400px;
     margin: 50px auto;
     gap: 50px;
+    padding: 0px 40px;
 }
 
 .go-back-button {
     font-weight: 300;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -23,10 +24,16 @@
 }
 
 .go-back-button:hover {
-    background-color: #3e4a55a2;
+    background-color: var(--hoverButton-color);
 }
 
 .go-back-button img {
     height: 8px;
 }
 
+@media only screen and (max-width: 900px) {
+    .country-page {
+        margin: 30px auto;
+        padding: 0px 10px;
+    }
+  }

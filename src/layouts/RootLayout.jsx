@@ -1,17 +1,16 @@
 import './Navbar.css';
 import { Outlet } from "react-router-dom";
+import LightMode from '../components/LightMode/LightMode';
 
 const RootLayout = () => {
+  
   return (
     <div className="root-layout">
       <header>
         <nav className="navbar">
           <a href="/">The Flag App</a>
-          <img src="../src/assets/techover-logo.png" alt="TECHOVER" />
-          <button className="dark-light-mode">
-            <img src="../src/assets/moon.svg" alt="Moon" />
-            <p>Dark Mode</p>
-          </button>
+          <img className='logo' src="../src/assets/techover-logo.png" alt="TECHOVER" />
+          <LightMode/>
         </nav>
       </header>
       <main>

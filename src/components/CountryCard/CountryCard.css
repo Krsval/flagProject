@@ -1,8 +1,7 @@
 .CountryCard {
-  width: 300px;
   height: 300px;
   border-radius: 4px;
-  background-color: rgb(43, 56, 68);
+  background-color: var(--card-color);
   transition: all 0.2s;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
@@ -26,14 +25,14 @@
 }
 
 .country_card_name {
-  color: white;
+  color: var(--primary-color);
   font-size: 1rem;
   line-height: 1;
 }
 
 .text-section {
   padding: 16px;
-  color: #C7CACE;
+  color: var(--secondary-color);
   font-size: 15px;
 }
 

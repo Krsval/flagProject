@@ -5,13 +5,13 @@
     flex-direction: column;
     gap: 50px;
     background-color: none;
-    max-width: 1400px;
+    padding: 20px;
 }
 
 .search {
     display: flex;
     justify-content: space-between;
-
+    padding: 0px 20px;
 }
 
 .card-layout {
@@ -20,3 +20,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+@media only screen and (max-width: 900px) {
+    .Home {
+      margin: 0px auto
+    }
+    .search {
+      flex-direction: column;
+      gap: 20px;
+    };
+  }

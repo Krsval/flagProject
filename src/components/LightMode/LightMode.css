@@ -1,0 +1,30 @@
+.dark-light-mode {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+    color: var(--primary-color);
+    align-items: center;
+    height: 30px;
+    border-radius: 7px;
+    transition: all 0.2s;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .light_mode_input {
+    position: absolute;
+    /* opacity: 0; */
+    height: 0;
+    width: 0;
+  }
+  
+  .dark-light-mode p {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: larger;
+  }
+  
+  .dark-light-mode:hover {
+    box-shadow:var(--darkLightHover-color);
+  }

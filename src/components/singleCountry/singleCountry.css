@@ -6,20 +6,19 @@
 }
 
 .country_flag {
-    height: 300px;
+    width: 100%;
 }
 
 .country_flag img {
     border-radius: 10px;
     object-fit: cover;
-    height: 100%;
     width: 100%;
 }
 
 .country_name_info_borders {
  display: flex;
  flex-direction: column;
- justify-content: space-between;
+ gap: 20px;
  max-width: 600px;
 }
 
@@ -38,10 +37,7 @@
     justify-content: space-between;
     margin-top: 10px;
     padding-top: 10px;
-}
-
-.right-text-section, .left-text-section {
-    width: 300px;
+    gap: 60px;
 }
 
 .single_line_info_text {
@@ -67,3 +63,13 @@
     flex-wrap: wrap;
     gap: 5px;
 }
+
+@media only screen and (max-width: 900px) {
+    .country-section{
+        flex-direction: column;
+    }
+    .country_info_text {
+        flex-direction: column;
+        gap: 0px;
+    }
+  }

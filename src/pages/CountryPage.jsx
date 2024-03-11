@@ -1,6 +1,6 @@
 import "./CountryPage.css";
 import SingleCountry from "../components/singleCountry/singleCountry.jsx";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 const CountryPage = () => {
   const { country } = useLoaderData();
@@ -11,10 +11,10 @@ const CountryPage = () => {
 
   return (
     <div className="country-page">
-      <a className="go-back-button" href="/">
-        <img src="../src/assets/arrow-left.svg" alt="back" />
+      <Link className="go-back-button" to="/">
+        <img className="arrow-left" src="../src/assets/arrow-left.svg" alt="back" />
         BACK
-      </a>
+      </Link>
       <div className="country-info">
         {country.map((countryData) => (
           <SingleCountry

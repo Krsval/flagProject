@@ -1,8 +1,7 @@
 header {
-    background-color: #3E4A55;
+    background-color: var(--nav-color);
     display: flex;
     justify-content: center;
-    color: white;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
   }
@@ -13,12 +12,13 @@ header {
     align-items: center;
     height: 64px;
     width: 1400px;
+    padding: 0px 40px;
   }
   
   .navbar a {
     font-weight: 600;
     letter-spacing: 1px;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 20px;
   }
@@ -27,27 +27,9 @@ header {
     height: 20px;
     pointer-events: none;
   }
-  
-  .dark-light-mode {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    gap: 10px;
-    color: white;
-    align-items: center;
-    height: 30px;
-    border-radius: 7px;
-    transition: all 0.2s;
+
+  @media only screen and (max-width: 900px) {
+    .navbar img {
+      display: none;
+    };
   }
-  
-  .dark-light-mode p {
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: larger;
-  }
-  
-  .dark-light-mode:hover {
-    cursor: pointer;
-    box-shadow: rgba(253, 253, 253, 0.3) 0px 0px 5px 5px;
-  }
-  

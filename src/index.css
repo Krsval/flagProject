@@ -3,18 +3,45 @@
   box-sizing: border-box;
 }
 
+[data-theme='dark'] {
+  --bg-color: #202C36;
+  --nav-color: #3E4A55;
+  --primary-color: #FFFFFF;
+  --secondary-color: #C7CACE;
+  --card-color: #333b43;
+  --hoverLink-color:#57616B;
+  --scroll-color: #565656;
+  --hoverButton-color: #3e4a55a2;
+  --darkLightHover-color: rgba(253, 253, 253, 0.3) 0px 0px 5px 5px;
+  --snippet-color: #444E56;
+  --snippetHover-color: #606d76;
+}
+
+[data-theme='light'] {
+  --bg-color: #FFFFFF;
+  --nav-color: #FFFFFF;
+  --primary-color: #000000;
+  --secondary-color: #666666;
+  --card-color: #FFFFFF;
+  --hoverLink-color:#cdcdcd;
+  --scroll-color: #56565693;
+  --hoverButton-color: #6f6f6f17;
+  --darkLightHover-color: rgba(44, 44, 44, 0.3) 0px 0px 5px 5px;
+  --snippet-color: #EBEBEB;
+  --snippetHover-color: #d5d5d5;
+}
+
 body {
-  background-color: #202C36;
+  background-color: var(--bg-color);
   font-family: 'Open Sans', sans-serif;
 }
 
 ::-webkit-scrollbar {
   width: 5px;
-  
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #565656;
+  background-color: var(--scroll-color);
   border-radius: 5px;
 }
 

@@ -5,12 +5,12 @@
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     transition: all 0.1s;
-    background-color: #444E56;
+    background-color: var(--snippet-color);
 }
 
 .snippet:hover {
-    background-color: #606d76;
+    background-color: var(--snippetHover-color);
 }
