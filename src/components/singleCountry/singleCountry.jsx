@@ -51,7 +51,7 @@ const SingleCountry = ({
                 <strong>Currency:</strong> {currency ? Object.values(currency)[0].name : '------'}
               </div>
               <div className="single_line_info_text">
-                <strong>Laguage:</strong> {languages}
+                <strong>Language:</strong> {languages}
               </div>
             </div>
           </div>

@@ -1,75 +1,104 @@
 .country-section {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 50px;
 }
 
 .country_flag {
-    width: 100%;
+  width: 100%;
 }
 
 .country_flag img {
-    border-radius: 10px;
-    object-fit: cover;
-    width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .country_name_info_borders {
- display: flex;
- flex-direction: column;
- gap: 20px;
- max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .country_name {
-    font-size: 3rem;
-    font-weight: 400;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .country_name_info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .country_info_text {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    padding-top: 10px;
-    gap: 60px;
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 10px;
+  padding-top: 10px;
+  gap: 60px;
 }
 
 .single_line_info_text {
-    padding-bottom: 10px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+  align-items: center;
 }
 
 .border-countries {
-    font-weight: 600;
-    height:130px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  font-weight: 600;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .border-countries h4 {
-    font-weight: 600;
-    text-decoration: underline;
+  font-weight: 600;
+  text-decoration: underline;
 }
 .snippets {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Loading State */
+
+.img_loading {
+  height: 500px;
+  width: 100%;
+  animation: skeleton-loading 1.5s linear infinite alternate;
+  border-radius: 10px;
+}
+
+.country_name_info #country_name {
+  height: 40px;
+  width: 200px;
+  margin: 20px 0px 5px 0px;
+}
+
+.single_line_info_text .loading {
+  width: 80px;
+}
+
+.snippet_loading {
+  animation: skeleton-loading 1.5s linear infinite alternate;
+  height: 27px;
+  width: 40px;
+  border-radius: 40px;
 }
 
 @media only screen and (max-width: 900px) {
-    .country-section{
-        flex-direction: column;
-    }
-    .country_info_text {
-        flex-direction: column;
-        gap: 0px;
-    }
+  .country-section {
+    flex-direction: column;
   }
+  .country_info_text {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .img_loading {
+    height: 200px;
+  }
+}

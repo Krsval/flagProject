@@ -41,3 +41,51 @@
   align-items: center;
   gap: 5px;
 }
+
+/* Loading state CSS */
+#loading_img {
+  background-color: var(--skeletonOne-color);
+  height: 150px;
+  width: 300px;
+  border-radius: 4px 4px 0px 0px;
+  object-fit: fill;
+  pointer-events: none;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.loading_text_section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 16px;
+}
+
+.loading {
+  background-color: var(--skeletonOne-color);
+  width: 150px;
+  height: 12px;
+  border-radius: 5px;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+#country_name {
+  height: 18px;
+  width: 120px;
+}
+
+#capital {
+width: 130px;
+}
+
+#population {
+width: 160px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: var(--skeletonOne-color);
+  }
+  100% {
+    background-color: var(--skeletonTwo-color);
+  }
+}

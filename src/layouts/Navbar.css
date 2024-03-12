@@ -11,8 +11,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 64px;
-    width: 1400px;
-    padding: 0px 40px;
+    width: 1360px;
+    padding: 0px 20px;
   }
   
   .navbar a {
@@ -29,6 +29,9 @@ header {
   }
 
   @media only screen and (max-width: 900px) {
+    .navbar{
+      padding: 0px 10px;
+    }
     .navbar img {
       display: none;
     };

@@ -1,12 +1,32 @@
 import "./CountryPage.css";
+import React, { useState, useEffect } from "react";
 import SingleCountry from "../components/singleCountry/singleCountry.jsx";
+import LoadingSingleCountry from "../components/singleCountry/LoadingSingleCountry.jsx";
 import { useLoaderData, Link } from "react-router-dom";
 
 const CountryPage = () => {
+  const [loading, setLoading] = useState(true);
   const { country } = useLoaderData();
 
-  if (!country) {
-    return <div>Loading...</div>
+//Fördröjning för att visa Loading State
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(delay);
+  }, []);
+
+  if (loading) {
+    return (
+    <div className="country-page">
+    <Link className="go-back-button" to="/">
+      <img className="arrow-left" src="../src/assets/arrow-left.svg" alt="back" />
+      BACK
+    </Link>
+    <div className="country-info">
+      <LoadingSingleCountry/>
+    </div>
+  </div>)
   }
 
   return (

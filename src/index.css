@@ -15,6 +15,8 @@
   --darkLightHover-color: rgba(253, 253, 253, 0.3) 0px 0px 5px 5px;
   --snippet-color: #444E56;
   --snippetHover-color: #606d76;
+  --skeletonOne-color: #66717bde;
+  --skeletonTwo-color: #66717b7a;
 }
 
 [data-theme='light'] {
@@ -29,6 +31,8 @@
   --darkLightHover-color: rgba(44, 44, 44, 0.3) 0px 0px 5px 5px;
   --snippet-color: #EBEBEB;
   --snippetHover-color: #d5d5d5;
+  --skeletonOne-color: #b6b6b6;
+  --skeletonTwo-color: #c0c0c0;
 }
 
 body {

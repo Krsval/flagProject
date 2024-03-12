@@ -1,60 +1,48 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './LightMode.css';
 
 const LightMode = () => {
+  const isDarkMode = useRef(false);
+  const logoRef = useRef(null);
+  const moonSunRef = useRef(null);
+  const leftArrowRef = useRef(null);
+  const lightModeTextRef = useRef(null);
+
   useEffect(() => {
-    const setDarkMode = () => {
-      document.querySelector("body").setAttribute("data-theme", "dark");
-      const logo = document.querySelector('.logo');
-      const moonSun = document.querySelector('.moonSun');
-      const leftArrow = document.querySelector('.arrow-left')
-      if (logo) {
-        logo.src = '/src/assets/techover-logo.png';
-      }
-      if (moonSun) {
-        moonSun.src = '/src/assets/moon.svg';
-      }
-      if (leftArrow) {
-        leftArrow.src = '/src/assets/arrow-left.svg';
-      }
-    };
-    setDarkMode();
+    setTheme('dark');
+    updateElements();
   }, []);
 
-  const toggleTheme = (e) => {
-    const logo = document.querySelector('.logo');
-    const moonSun = document.querySelector('.moonSun');
-    const leftArrow = document.querySelector('.arrow-left')
-    if (e.target.checked) {
-      document.querySelector("body").setAttribute("data-theme", "dark");
-      if (logo) {
-        logo.src = '/src/assets/techover-logo.png';
-      }
-      if (moonSun) {
-        moonSun.src = '/src/assets/moon.svg';
-      }
-      if (leftArrow) {
-        leftArrow.src = '/src/assets/arrow-left.svg';
-      }
-    } else {
-      document.querySelector("body").setAttribute("data-theme", "light");
-      if (logo) {
-        logo.src = '/src/assets/techover-logo-dark.png';
-      }
-      if (moonSun) {
-        moonSun.src = '/src/assets/moon-bordered.svg';
-      }
-      if (leftArrow) {
-        leftArrow.src = '/src/assets/arrow-left-dark.svg';
-      }
-    }
+  const setTheme = (theme) => {
+    document.querySelector("body").setAttribute("data-theme", theme);
+    isDarkMode.current = theme === 'dark';
+  };
+
+  const updateElements = () => {
+    const images = {
+      logo: isDarkMode.current ? '/src/assets/techover-logo.png' : '/src/assets/techover-logo-dark.png',
+      moonSun: isDarkMode.current ? '/src/assets/moon.svg' : '/src/assets/moon-bordered.svg',
+      leftArrow: isDarkMode.current ? '/src/assets/arrow-left.svg' : '/src/assets/arrow-left-dark.svg',
+    };
+
+    if (logoRef.current) logoRef.current.src = images.logo;
+    if (moonSunRef.current) moonSunRef.current.src = images.moonSun;
+    if (leftArrowRef.current) leftArrowRef.current.src = images.leftArrow;
+
+    if (lightModeTextRef.current) lightModeTextRef.current.textContent = isDarkMode.current ? 'Light Mode' : 'Dark Mode';
+  };
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode.current ? 'light' : 'dark';
+    setTheme(newTheme);
+    updateElements();
   };
 
   return (
     <label className="dark-light-mode">
       <input type="checkbox" className='light_mode_input' onChange={toggleTheme} />
-      <img className="moonSun" src='../src/assets/moon.svg' alt="Moon" />
-      <p>Dark Mode</p>
+      <img ref={moonSunRef} className="moonSun" src='../src/assets/moon.svg' alt="Moon" />
+      <div ref={lightModeTextRef} className='Light_Dark_Mode'>Light Mode</div>
     </label>
   );
 };
