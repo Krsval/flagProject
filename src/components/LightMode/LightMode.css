@@ -9,11 +9,11 @@
     border-radius: 7px;
     transition: all 0.2s;
     cursor: pointer;
+    padding: 5px;
   }
 
   .light_mode_input {
     position: absolute;
-    /* opacity: 0; */
     height: 0;
     width: 0;
   }
@@ -25,5 +25,5 @@
   }
   
   .dark-light-mode:hover {
-    box-shadow:var(--darkLightHover-color);
+    background-color:var(--darkLightHover-color);
   }
