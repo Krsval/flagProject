@@ -5,7 +5,7 @@ const PageNotFound = () => {
   return (
     <div className="country-page">
       <Link className="go-back-button" to="/">
-        <img className="arrow-left" src="/public/assets/arrow-left.svg" alt="back" />
+        <img className="arrow-left" src="/assets/arrow-left.svg" alt="back" />
         BACK
       </Link>
       <h1 className="country-info">

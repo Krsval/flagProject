@@ -8,14 +8,18 @@ const LightMode = () => {
       const logo = document.querySelector('.logo');
       const moonSun = document.querySelector('.moonSun');
       const leftArrow = document.querySelector('.arrow-left')
+      const dropdownArrow = document.querySelector('.dropdown-arrow')
       if (logo) {
-        logo.src = '/public/assets/techover-logo.png';
+        logo.src = '/assets/techover-logo.png';
       }
       if (moonSun) {
-        moonSun.src = '/public/assets/moon.svg';
+        moonSun.src = '/assets/moon.svg';
       }
       if (leftArrow) {
-        leftArrow.src = '/public/assets/arrow-left.svg';
+        leftArrow.src = '/assets/arrow-left.svg';
+      }
+      if (dropdownArrow) {
+        dropdownArrow.src = '/assets/arrow-down-light.svg';
       }
     };
     setDarkMode();
@@ -25,27 +29,35 @@ const LightMode = () => {
     const logo = document.querySelector('.logo');
     const moonSun = document.querySelector('.moonSun');
     const leftArrow = document.querySelector('.arrow-left')
+    const dropdownArrow = document.querySelector('.dropdown-arrow')
     if (e.target.checked) {
       document.querySelector("body").setAttribute("data-theme", "dark");
       if (logo) {
-        logo.src = '/public/assets/techover-logo.png';
+        logo.src = '/assets/techover-logo.png';
       }
       if (moonSun) {
-        moonSun.src = '/public/assets/moon.svg';
+        moonSun.src = '/assets/moon.svg';
       }
       if (leftArrow) {
-        leftArrow.src = '/public/assets/arrow-left.svg';
+        leftArrow.src = '/assets/arrow-left.svg';
       }
+      if (dropdownArrow) {
+        dropdownArrow.src = '/assets/arrow-down-light.svg';
+      }
+
     } else {
       document.querySelector("body").setAttribute("data-theme", "light");
       if (logo) {
-        logo.src = '/public/assets/techover-logo-dark.png';
+        logo.src = '/assets/techover-logo-dark.png';
       }
       if (moonSun) {
-        moonSun.src = '/public/assets/moon-bordered.svg';
+        moonSun.src = '/assets/moon-bordered.svg';
       }
       if (leftArrow) {
-        leftArrow.src = '/public/assets/arrow-left-dark.svg';
+        leftArrow.src = '/assets/arrow-left-dark.svg';
+      }
+      if (dropdownArrow) {
+        dropdownArrow.src = '/assets/arrow-down-dark.svg';
       }
     }
   };
@@ -53,7 +65,7 @@ const LightMode = () => {
   return (
     <label className="dark-light-mode">
       <input type="checkbox" className='light_mode_input' onChange={toggleTheme} />
-      <img className="moonSun" src='/public/assets/moon.svg' alt="Moon" />
+      <img className="moonSun" src='/assets/moon.svg' alt="Moon" />
       <p>Dark Mode</p>
     </label>
   );

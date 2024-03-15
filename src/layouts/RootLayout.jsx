@@ -9,7 +9,7 @@ const RootLayout = () => {
       <header>
         <nav className="navbar">
           <a href="/">The Flag App</a>
-          <img className='logo' src="/public/assets/techover-logo.png" alt="TECHOVER" />
+          <img className='logo' src="/assets/techover-logo.png" alt="TECHOVER" />
           <LightMode/>
         </nav>
       </header>
