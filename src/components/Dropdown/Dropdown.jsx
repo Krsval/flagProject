@@ -12,7 +12,7 @@ const Dropdown = () => {
     <div className="Dropdown">
       <button>
         <div>{value == "" ? "All" : value}</div>
-        <img src="../src\assets\arrow-down-light.svg" alt="" />
+        <img src="/public/assets/arrow-down-light.svg" alt="" />
       </button>
       <div className="dropdown-content">
         <Link

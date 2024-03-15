@@ -20,7 +20,7 @@ const CountryPage = () => {
     return (
     <div className="country-page">
     <Link className="go-back-button" to="/">
-      <img className="arrow-left" src="../src/assets/arrow-left.svg" alt="back" />
+      <img className="arrow-left" src="/public/assets/arrow-left.svg" alt="back" />
       BACK
     </Link>
     <div className="country-info">
@@ -32,7 +32,7 @@ const CountryPage = () => {
   return (
     <div className="country-page">
       <Link className="go-back-button" to="/">
-        <img className="arrow-left" src="../src/assets/arrow-left.svg" alt="back" />
+        <img className="arrow-left" src="/public/assets/arrow-left.svg" alt="back" />
         BACK
       </Link>
       <div className="country-info">

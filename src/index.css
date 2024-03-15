@@ -49,4 +49,7 @@ body {
   border-radius: 5px;
 }
 
-
+::selection {
+  color: none;
+  background: none;
+}

@@ -21,6 +21,10 @@
   gap: 20px;
 }
 
+.country_name_info_borders:hover {
+  cursor: default;
+}
+
 .country_name {
   font-size: 3rem;
   font-weight: 400;
