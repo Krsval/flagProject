@@ -39,9 +39,7 @@ const Home = () => {
         </h1>
       </div>
     );
-  }
-
-  if (loading) {
+  } else if (loading) {
     return (
       <div className="Home">
         <div className="search">
@@ -51,32 +49,35 @@ const Home = () => {
         <div className="card-layout">{generatePlaceholders(16)}</div>
       </div>
     );
+  } else {
+    return (
+      <div className="Home">
+        <div className="search">
+          <SearchBar />
+          <Dropdown />
+        </div>
+        <div className="card-layout">
+          {countries.map((country) => (
+            <CountryCard
+              key={country.name.common}
+              flag={country.flags.png}
+              country={country.name.common}
+              capital={country.capital ? country.capital : "------"}
+              population={new Intl.NumberFormat("en-US").format(
+                country.population
+              )}
+              language={
+                country.languages
+                  ? Object.values(country.languages)[0]
+                  : "------"
+              }
+              cca3={country.cca3}
+            />
+          ))}
+        </div>
+      </div>
+    );
   }
-  return (
-    <div className="Home">
-      <div className="search">
-        <SearchBar />
-        <Dropdown />
-      </div>
-      <div className="card-layout">
-        {countries.map((country) => (
-          <CountryCard
-            key={country.name.common}
-            flag={country.flags.png}
-            country={country.name.common}
-            capital={country.capital ? country.capital : "------"}
-            population={new Intl.NumberFormat("en-US").format(
-              country.population
-            )}
-            language={
-              country.languages ? Object.values(country.languages)[0] : "------"
-            }
-            cca3={country.cca3}
-          />
-        ))}
-      </div>
-    </div>
-  );
 };
 
 export default Home;
