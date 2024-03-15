@@ -23,8 +23,6 @@ const router = createBrowserRouter(
         loader={singleCountryLoader}
         errorElement={<PageNotFound />}
       />
-
-      <Route path="/*" element={<PageNotFound />} />
     </Route>
   )
 );

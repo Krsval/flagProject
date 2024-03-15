@@ -1,29 +1,29 @@
 .dark-light-mode {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    gap: 10px;
-    color: var(--primary-color);
-    align-items: center;
-    height: 30px;
-    border-radius: 7px;
-    transition: all 0.2s;
-    cursor: pointer;
-    padding: 5px;
-  }
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  color: var(--primary-color);
+  align-items: center;
+  height: 30px;
+  border-radius: 7px;
+  transition: all 0.2s;
+  cursor: pointer;
+  padding: 5px;
+}
 
-  .light_mode_input {
-    position: absolute;
-    height: 0;
-    width: 0;
-  }
-  
-  .dark-light-mode p {
-    font-weight: 600;
-    letter-spacing: 1px;
-    font-size: larger;
-  }
-  
-  .dark-light-mode:hover {
-    background-color:var(--darkLightHover-color);
-  }
+.light_mode_input {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.dark-light-mode p {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: larger;
+}
+
+.dark-light-mode:hover {
+  background-color: var(--darkLightHover-color);
+}

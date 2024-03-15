@@ -74,11 +74,11 @@
 }
 
 #capital {
-width: 130px;
+  width: 130px;
 }
 
 #population {
-width: 160px;
+  width: 160px;
 }
 
 @keyframes skeleton-loading {

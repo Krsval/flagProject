@@ -10,8 +10,7 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   const countries = useLoaderData();
 
-
-//Fördröjning för att visa Loading State
+  //Fördröjning för att visa Loading State
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoading(false);
@@ -28,6 +27,20 @@ const Home = () => {
     return placeholders;
   };
 
+  if (countries == null) {
+    return (
+      <div className="Home">
+        <div className="search">
+          <SearchBar />
+          <Dropdown />
+        </div>
+        <h1 id="error-text" className="card-layout">
+          There is no country with this name!
+        </h1>
+      </div>
+    );
+  }
+
   if (loading) {
     return (
       <div className="Home">
@@ -35,13 +48,10 @@ const Home = () => {
           <SearchBar />
           <Dropdown />
         </div>
-        <div className="card-layout">
-          {generatePlaceholders(16)}
-        </div>
+        <div className="card-layout">{generatePlaceholders(16)}</div>
       </div>
     );
   }
-
   return (
     <div className="Home">
       <div className="search">

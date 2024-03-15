@@ -8,7 +8,7 @@ const CountryPage = () => {
   const [loading, setLoading] = useState(true);
   const { country } = useLoaderData();
 
-//Fördröjning för att visa Loading State
+  //Fördröjning för att visa Loading State
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoading(false);
@@ -18,15 +18,16 @@ const CountryPage = () => {
 
   if (loading) {
     return (
-    <div className="country-page">
-    <Link className="go-back-button" to="/">
-      <img className="arrow-left" src="/assets/arrow-left.svg" alt="back" />
-      BACK
-    </Link>
-    <div className="country-info">
-      <LoadingSingleCountry/>
-    </div>
-  </div>)
+      <div className="country-page">
+        <Link className="go-back-button" to="/">
+          <img className="arrow-left" src="/assets/arrow-left.svg" alt="back" />
+          BACK
+        </Link>
+        <div className="country-info">
+          <LoadingSingleCountry />
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -42,14 +43,25 @@ const CountryPage = () => {
             flag={countryData.flags.svg}
             alt={countryData.flag.alt}
             country={countryData.name.common}
-            nativeName={countryData.name.nativeName ? countryData.name.nativeName : '------'}
-            capital={countryData.capital ? countryData.capital : '------'}
+            nativeName={
+              countryData.name.nativeName
+                ? countryData.name.nativeName
+                : "------"
+            }
+            capital={countryData.capital ? countryData.capital : "------"}
             population={new Intl.NumberFormat("en-US").format(
               countryData.population
             )}
-            borderCountries={countryData.borders ? countryData.borders.map((border) => border) : []}
-
-            languages={countryData.languages ? Object.values(countryData.languages)[0] : '------'}
+            borderCountries={
+              countryData.borders
+                ? countryData.borders.map((border) => border)
+                : []
+            }
+            languages={
+              countryData.languages
+                ? Object.values(countryData.languages)[0]
+                : "------"
+            }
             region={countryData.region}
             domain={countryData.tld}
             currency={countryData.currencies}

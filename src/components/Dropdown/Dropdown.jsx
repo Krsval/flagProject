@@ -10,10 +10,14 @@ const Dropdown = () => {
 
   return (
     <div className="Dropdown">
-      <button>
+      <div className="button">
         <div>{value == "" ? "All" : value}</div>
-        <img className="dropdown-arrow" src="/assets/arrow-down-light.svg" alt="" />
-      </button>
+        <img
+          className="dropdown-arrow"
+          src="/assets/arrow-down-light.svg"
+          alt=""
+        />
+      </div>
       <div className="dropdown-content">
         <Link
           className="region-link"

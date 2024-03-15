@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import LightMode from '../components/LightMode/LightMode';
 
 const RootLayout = () => {
-  
   return (
     <div className="root-layout">
       <header>

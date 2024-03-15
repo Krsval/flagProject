@@ -1,38 +1,38 @@
 header {
-    background-color: var(--nav-color);
-    display: flex;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+  background-color: var(--nav-color);
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-    width: 1360px;
-    padding: 0px 20px;
-  }
-  
-  .navbar a {
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-  .navbar img {
-    height: 20px;
-    pointer-events: none;
-  }
+}
 
-  @media only screen and (max-width: 900px) {
-    .navbar{
-      padding: 0px 10px;
-    }
-    .navbar .logo {
-      display: none;
-    };
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 1360px;
+  padding: 0px 20px;
+}
+
+.navbar a {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar img {
+  height: 20px;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+    padding: 0px 10px;
   }
+  .navbar .logo {
+    display: none;
+  }
+}

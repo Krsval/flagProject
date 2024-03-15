@@ -3,33 +3,33 @@
   box-sizing: border-box;
 }
 
-[data-theme='dark'] {
-  --bg-color: #202C36;
-  --nav-color: #3E4A55;
-  --primary-color: #FFFFFF;
-  --secondary-color: #C7CACE;
+[data-theme="dark"] {
+  --bg-color: #202c36;
+  --nav-color: #3e4a55;
+  --primary-color: #ffffff;
+  --secondary-color: #c7cace;
   --card-color: #333b43;
-  --hoverLink-color:#57616B;
+  --hoverLink-color: #57616b;
   --scroll-color: #565656;
   --hoverButton-color: #3e4a55a2;
   --darkLightHover-color: #4c5a67;
-  --snippet-color: #444E56;
+  --snippet-color: #444e56;
   --snippetHover-color: #606d76;
   --skeletonOne-color: #66717bde;
   --skeletonTwo-color: #66717b7a;
 }
 
-[data-theme='light'] {
-  --bg-color: #FFFFFF;
-  --nav-color: #FFFFFF;
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --nav-color: #ffffff;
   --primary-color: #000000;
   --secondary-color: #666666;
-  --card-color: #FFFFFF;
-  --hoverLink-color:#cdcdcd;
+  --card-color: #ffffff;
+  --hoverLink-color: #cdcdcd;
   --scroll-color: #56565693;
   --hoverButton-color: #6f6f6f17;
   --darkLightHover-color: rgba(44, 44, 44, 0.3) 0px 0px 5px 5px;
-  --snippet-color: #EBEBEB;
+  --snippet-color: #ebebeb;
   --snippetHover-color: #d5d5d5;
   --skeletonOne-color: #b6b6b6;
   --skeletonTwo-color: #c0c0c0;
@@ -37,7 +37,7 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -47,9 +47,4 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-color);
   border-radius: 5px;
-}
-
-::selection {
-  color: none;
-  background: none;
 }

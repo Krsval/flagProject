@@ -1,82 +1,81 @@
 .Dropdown {
-    background-color: transparent;
-    width: 180px;
-    height: 47px;
-    padding: 12px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid #6b6b6b;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    display: flex;
+  background-color: transparent;
+  width: 180px;
+  height: 47px;
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #6b6b6b;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  display: flex;
 }
 
-.Dropdown button {
-    border: none;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    color: var(--primary-color);
-    font-weight: normal;
-    font-weight: 300;
-    font-size: 1.0rem;
-    font-family: 'Open Sans', sans-serif;
+.Dropdown .button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: var(--primary-color);
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 .Dropdown img {
-    height: 7px;
+  height: 7px;
 }
 
-.Dropdown:hover, .Dropdown:focus {
-    border: 1px solid var(--primary-color);
+.Dropdown:hover,
+.Dropdown:focus {
+  border: 1px solid var(--primary-color);
 }
 
 .dropdown-content {
-    display: none;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.834);
-    background-color: var(--card-color);
-    position: absolute;
-    top: 101%;
-    left: 0;
-    border-radius: 5px;
+  display: none;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.834);
+  background-color: var(--card-color);
+  position: absolute;
+  top: 101%;
+  left: 0;
+  border-radius: 5px;
 }
 
 .Dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .region-link {
-    color: var(--primary-color);
-    padding: 5px;
-    text-decoration: none;
-    padding-left: 15px;
-    display: flex;
-    cursor: pointer;
-    
+  color: var(--primary-color);
+  padding: 5px;
+  text-decoration: none;
+  padding-left: 15px;
+  display: flex;
+  cursor: pointer;
 }
 
-
 .region-link:hover {
-    background-color: var(--hoverLink-color);
+  background-color: var(--hoverLink-color);
 }
 
 .Dropdown span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: var(--primary-color);
-        font-size: 1.0rem;
-        pointer-events: none;
-        transform: translateY(-50%) scale(0.6);
-        margin-left: -20px;
-        background-color: var(--bg-color);
-        padding: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.6);
+  margin-left: -20px;
+  background-color: var(--bg-color);
+  padding: 12px;
 }
