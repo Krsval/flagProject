@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -13,7 +13,7 @@ import allCountriesLoader from "./util/allCountriesLoader";
 import singleCountryLoader from "./util/singleCountryLoader";
 import PageNotFound from "./pages/PageNotFound";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} loader={allCountriesLoader} />
